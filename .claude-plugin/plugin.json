@@ -1,0 +1,14 @@
+{
+  "name": "romscribe-runs",
+  "version": "0.1.0",
+  "description": "Status line: progress of the newest romscribe explain run log (count and time only, no answers)",
+  "author": { "name": "danielboston38" },
+  "userConfig": {
+    "logs": {
+      "type": "string",
+      "title": "Logs folder",
+      "description": "Folder of explain run logs, absolute or relative to the session's working directory",
+      "default": "runs/explain/logs"
+    }
+  }
+}
