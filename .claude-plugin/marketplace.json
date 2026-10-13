@@ -1,12 +1,12 @@
 {
-  "name": "romscribe-runs",
-  "description": "Status line progress for romscribe explain runs",
+  "name": "code-run",
+  "description": "Status line progress for long-running job logs",
   "owner": {
     "name": "danielboston38"
   },
   "plugins": [
     {
-      "name": "romscribe-runs",
+      "name": "code-run",
       "source": "./"
     }
   ]

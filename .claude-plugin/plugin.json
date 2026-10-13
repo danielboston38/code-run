@@ -1,8 +1,10 @@
 {
-  "name": "romscribe-runs",
+  "name": "code-run",
   "version": "0.1.0",
-  "description": "Status line: progress of the newest romscribe explain run log (count and time only, no answers)",
-  "author": { "name": "danielboston38" },
+  "description": "Status line: progress of the newest long-running job log (count and time left only, never its output)",
+  "author": {
+    "name": "danielboston38"
+  },
   "userConfig": {
     "logs": {
       "type": "string",

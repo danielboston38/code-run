@@ -1,28 +1,29 @@
-# romscribe-runs
+# code-run
 
-A Claude Code mod that shows the progress of a romscribe explain run in the status line:
+A Claude Code mod that shows the progress of a long-running job in the status line:
 
 ```
 rep-plain · apple2-deadtest 8/23 ~6m left
 ```
 
-Every 15 seconds it reads the newest `*.log` in the logs folder and keeps only the run name, the ROM,
-the count and the time left. The model's answers and the reference names in the log are never shown,
-so blind judging stays blind. The entry clears when the log has not changed for 10 minutes.
+Every 15 seconds it reads the newest `*.log` in the logs folder and finds the last progress line of the
+form `[8/23  35%  ~6m left] <name> ...`. It shows the log's name, the item's name, the count and the time
+left, and nothing else from the line, so a job's output (model answers, reference text) stays out of view.
+The entry clears when the log has not changed for 10 minutes.
 
 ## Install
 
 ```
-/plugin install romscribe-runs --marketplace danielboston38/romscribe-runs
+/plugin install code-run --marketplace danielboston38/code-run
 ```
 
 Answer `y` to add the marketplace, then pick a scope.
 
 ## Setting
 
-`logs`: the folder of run logs, absolute or relative to the session's working directory.
-Default `runs/explain/logs`, which is right for a session started in the romscribe checkout.
+`logs`: the folder of job logs, absolute or relative to the session's working directory.
+Default `runs/explain/logs`.
 
 ## Limits
 
-A run that stalls for more than 10 minutes disappears from the status line as if it had finished.
+A job that stalls for more than 10 minutes disappears from the status line as if it had finished.
